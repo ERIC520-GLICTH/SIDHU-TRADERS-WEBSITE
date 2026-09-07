@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="SIDHU TRADERS - Global sourcing, reliable supply and international trade of recovered paper and recyclable materials.">
+<title>SIDHU TRADERS | Global Sourcing & International Trade</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  color:#17211b;
+  background:#f7f8f6;
+  line-height:1.6;
+}
+a{text-decoration:none;color:inherit}
+.container{width:min(1180px,92%);margin:auto}
+
+/* TOP BAR */
+.topbar{
+  background:#111a15;
+  color:#dce5df;
+  font-size:13px;
+  padding:9px 0;
+}
+.topbar .container{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:wrap;
+}
+.top-left,.top-right{
+  display:flex;
+  gap:20px;
+  align-items:center;
+}
+.top-right a:hover{color:#fff}
+
+/* HEADER */
+header{
+  background:#fff;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  box-shadow:0 2px 18px rgba(0,0,0,.08);
+}
+.nav{
+  min-height:78px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+}
+.logo{
+  font-size:23px;
+  font-weight:800;
+  letter-spacing:1px;
+  color:#13261b;
+}
+.logo span{
+  display:block;
+  font-size:10px;
+  letter-spacing:3px;
+  color:#738077;
+  margin-top:-2px;
+}
+nav{
+  display:flex;
+  align-items:center;
+  gap:22px;
+  font-size:12px;
+  font-weight:700;
+}
+nav a{color:#37443c}
+nav a:hover{color:#1d6b43}
+.menu-btn{
+  display:none;
+  font-size:27px;
+  cursor:pointer;
+}
+
+/* HERO */
+.hero{
+  min-height:650px;
+  background:
+    linear-gradient(90deg,rgba(7,22,14,.86),rgba(7,22,14,.52),rgba(7,22,14,.22)),
+    url("https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=2000&q=85")
+    center/cover;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  position:relative;
+}
+.hero-content{max-width:760px;padding:85px 0}
+.eyebrow{
+  color:#a9d9bd;
+  font-weight:800;
+  font-size:13px;
+  letter-spacing:2px;
+  margin-bottom:18px;
+}
+.hero h1{
+  font-size:clamp(42px,6vw,74px);
+  line-height:1.04;
+  letter-spacing:-2px;
+  margin-bottom:24px;
+}
+.hero p{
+  max-width:690px;
+  font-size:17px;
+  color:#e2e9e4;
+  margin-bottom:32px;
+}
+.buttons{display:flex;gap:14px;flex-wrap:wrap}
+.btn{
+  display:inline-block;
+  padding:14px 24px;
+  border-radius:4px;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.8px;
+  transition:.25s;
+}
+.btn-primary{
+  background:#c8a96b;
+  color:#101610;
+}
+.btn-primary:hover{background:#e0c184;transform:translateY(-2px)}
+.btn-outline{
+  border:1px solid rgba(255,255,255,.6);
+  color:#fff;
+}
+.btn-outline:hover{background:#fff;color:#17211b}
+
+.global-badge{
+  position:absolute;
+  right:5%;
+  bottom:55px;
+  background:rgba(11,27,18,.82);
+  border:1px solid rgba(255,255,255,.18);
+  padding:18px 22px;
+  border-radius:6px;
+  backdrop-filter:blur(8px);
+}
+.global-badge strong{
+  display:block;
+  font-size:11px;
+  letter-spacing:2px;
+  color:#c8a96b;
+  margin-bottom:5px;
+}
+.global-badge span{font-size:12px;color:#dce5df}
+
+/* STATS */
+.stats{
+  background:#fff;
+  box-shadow:0 5px 25px rgba(0,0,0,.07);
+  position:relative;
+  z-index:5;
+}
+.stats-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+}
+.stat{
+  padding:28px 18px;
+  text-align:center;
+  border-right:1px solid #e5e9e6;
+}
+.stat:last-child{border-right:0}
+.stat strong{
+  display:block;
+  font-size:29px;
+  color:#1b6842;
+}
+.stat span{
+  font-size:11px;
+  font-weight:700;
+  color:#6b756f;
+  text-transform:uppercase;
+  letter-spacing:.7px;
+}
+
+/* GENERAL */
+section{padding:90px 0}
+.section-head{text-align:center;max-width:720px;margin:0 auto 48px}
+.kicker{
+  color:#8d713b;
+  font-weight:800;
+  letter-spacing:2px;
+  font-size:11px;
+  text-transform:uppercase;
+  margin-bottom:10px;
+}
+.section-head h2{
+  font-size:42px;
+  line-height:1.15;
+  color:#17271d;
+  margin-bottom:15px;
+}
+.section-head p{color:#68736c}
+
+/* PRODUCTS */
+.products{background:#f2f5f2}
+.product-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+.card{
+  background:#fff;
+  padding:30px;
+  border:1px solid #e1e6e2;
+  transition:.25s;
+  position:relative;
+}
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 14px 35px rgba(18,50,31,.10);
+}
+.card-number{
+  font-size:12px;
+  font-weight:900;
+  color:#9a7c42;
+  letter-spacing:1px;
+}
+.card h3{
+  font-size:22px;
+  margin:10px 0 12px;
+  color:#1b3b28;
+}
+.card p{font-size:14px;color:#6b756f}
+.tag{
+  position:absolute;
+  top:18px;
+  right:18px;
+  background:#e6f0e9;
+  color:#236b45;
+  font-size:9px;
+  padding:5px 8px;
+  font-weight:800;
+}
+
+/* ABOUT */
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+.about-image{
+  min-height:460px;
+  background:
+    linear-gradient(rgba(8,25,16,.18),rgba(8,25,16,.18)),
+    url("https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=1200&q=85")
+    center/cover;
+}
+.about h2{
+  font-size:43px;
+  line-height:1.15;
+  margin:10px 0 20px;
+}
+.about p{color:#68736c;margin-bottom:16px}
+.checks{margin-top:24px;display:grid;gap:12px}
+.check{
+  font-weight:700;
+  font-size:14px;
+}
+.check::before{
+  content:"✓";
+  color:#267348;
+  font-weight:900;
+  margin-right:10px;
+}
+
+/* WORK */
+.work{background:#132219;color:#fff}
+.work .section-head h2{color:#fff}
+.work .section-head p{color:#b9c6be}
+.work-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+.work-card{
+  padding:28px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.035);
+}
+.work-card .num{
+  font-size:28px;
+  color:#c8a96b;
+  font-weight:800;
+}
+.work-card h3{margin:12px 0 8px}
+.work-card p{font-size:13px;color:#bac6bf}
+
+/* NETWORK */
+.network-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:55px;
+  align-items:center;
+}
+.network-map{
+  min-height:390px;
+  background:
+    linear-gradient(rgba(18,38,26,.25),rgba(18,38,26,.25)),
+    url("https://images.unsplash.com/photo-1565610222536-ef125c59da2e?auto=format&fit=crop&w=1200&q=85")
+    center/cover;
+}
+.network h2{font-size:42px;line-height:1.15;margin:10px 0 20px}
+.network p{color:#68736c}
+.network-list{margin:25px 0;display:grid;gap:15px}
+.network-item{
+  padding:16px 18px;
+  background:#f3f5f3;
+  border-left:3px solid #c8a96b;
+}
+.network-item strong{display:block;color:#1b3b28}
+.network-item span{font-size:13px;color:#69746d}
+
+/* CTA */
+.cta{
+  background:
+    linear-gradient(90deg,rgba(12,34,21,.93),rgba(12,34,21,.78)),
+    url("https://images.unsplash.com/photo-1586528116493-da8b0b2e1f0b?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
+  color:#fff;
+  text-align:center;
+}
+.cta h2{font-size:45px;line-height:1.1;margin-bottom:16px}
+.cta p{max-width:650px;margin:0 auto 28px;color:#d2ddd5}
+
+/* CONTACT */
+.contact{background:#f1f4f1}
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+}
+.contact-info h2{font-size:40px;line-height:1.15;margin:10px 0 20px}
+.contact-info p{color:#68736c}
+.contact-item{
+  margin-top:22px;
+  padding:18px;
+  background:#fff;
+  border:1px solid #e2e7e3;
+}
+.contact-item strong{display:block;color:#1b3b28;margin-bottom:4px}
+.contact-item span{font-size:14px;color:#69746d}
+form{
+  background:#fff;
+  padding:30px;
+  border:1px solid #e1e6e2;
+}
+.form-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+}
+input,textarea,select{
+  width:100%;
+  padding:14px;
+  margin-bottom:15px;
+  border:1px solid #dce2de;
+  outline:none;
+  font-family:inherit;
+  font-size:14px;
+}
+textarea{min-height:130px;resize:vertical}
+input:focus,textarea:focus,select:focus{border-color:#39805a}
+form button{border:0;cursor:pointer}
+
+/* FOOTER */
+footer{
+  background:#0c1510;
+  color:#aebbb2;
+  padding:55px 0 20px;
+}
+.footer-grid{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr 1fr;
+  gap:35px;
+  margin-bottom:40px;
+}
+.footer-brand{color:#fff;font-size:23px;font-weight:800}
+.footer-brand small{
+  display:block;
+  color:#718078;
+  font-size:9px;
+  letter-spacing:2px;
+  margin-top:2px;
+}
+footer h4{color:#fff;margin-bottom:14px;font-size:13px}
+footer a{display:block;font-size:12px;margin:8px 0;color:#aebbb2}
+footer a:hover{color:#fff}
+.copyright{
+  border-top:1px solid rgba(255,255,255,.1);
+  padding-top:18px;
+  font-size:11px;
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+/* FLOATING BUTTONS */
+.float-buttons{
+  position:fixed;
+  right:18px;
+  bottom:20px;
+  z-index:900;
+  display:grid;
+  gap:8px;
+}
+.float-buttons a{
+  background:#173b26;
+  color:#fff;
+  padding:11px 15px;
+  border-radius:4px;
+  font-size:10px;
+  font-weight:800;
+  box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+/* MOBILE */
+@media(max-width:900px){
+  nav{
+    display:none;
+    position:absolute;
+    top:78px;
+    left:0;
+    width:100%;
+    background:#fff;
+    padding:20px;
+    flex-direction:column;
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+  }
+  nav.show{display:flex}
+  .menu-btn{display:block}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .product-grid,.work-grid{grid-template-columns:1fr 1fr}
+  .about-grid,.network-grid,.contact-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .hero{min-height:620px}
+  .hero h1{font-size:43px}
+  .global-badge{display:none}
+  section{padding:65px 0}
+  .section-head h2,.about h2,.network h2,.contact-info h2{font-size:33px}
+  .product-grid,.work-grid,.stats-grid{grid-template-columns:1fr}
+  .stat{border-right:0;border-bottom:1px solid #e5e9e6}
+  .form-row{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .float-buttons{right:10px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <div class="top-left">
+      <span>✉ info@sidhutraders.com</span>
+      <span>☎ +91 98727 00007</span>
+    </div>
+    <div class="top-right">
+      <span>Jagraon, Ludhiana District, Punjab, India</span>
+      <a href="#">LinkedIn</a>
+      <a href="#">Instagram</a>
+      <a href="https://wa.me/919872700007">WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<header>
+  <div class="container nav">
+    <a href="#home" class="logo">
+      SIDHU TRADERS
+      <span>GLOBAL SOURCING • INTERNATIONAL TRADE</span>
+    </a>
+
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+    <nav id="nav">
+      <a href="#home">HOME</a>
+      <a href="#about">ABOUT US</a>
+      <a href="#products">PRODUCTS</a>
+      <a href="#network">GLOBAL NETWORK</a>
+      <a href="#work">TRADE & LOGISTICS</a>
+      <a href="#suppliers">SUPPLIERS</a>
+      <a href="#buyers">BUYERS</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="container hero-content">
+    <div class="eyebrow">WELCOME TO SIDHU TRADERS</div>
+    <h1>CONNECTING GLOBAL SUPPLY WITH INDIAN INDUSTRY.</h1>
+    <p>
+      Sidhu Traders specializes in international sourcing, import coordination
+      and reliable supply of recovered paper and recyclable materials to
+      industrial buyers in India.
+    </p>
+
+    <div class="buttons">
+      <a class="btn btn-primary" href="#contact">REQUEST A QUOTE</a>
+      <a class="btn btn-outline" href="#suppliers">PARTNER WITH US</a>
+    </div>
+  </div>
+
+  <div class="global-badge">
+    <strong>GLOBAL SOURCING</strong>
+    <span>USA • UAE • UK • CANADA • & MORE</span>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="container stats-grid">
+    <div class="stat">
+      <strong>10+</strong>
+      <span>Countries Sourcing From</span>
+    </div>
+    <div class="stat">
+      <strong>25,000+</strong>
+      <span>MT Imported & Delivered</span>
+    </div>
+    <div class="stat">
+      <strong>100+</strong>
+      <span>Indian Buyers</span>
+    </div>
+    <div class="stat">
+      <strong>100%</strong>
+      <span>Quality & Transparency</span>
+    </div>
+  </div>
+</section>
+
+<section class="products" id="products">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">OUR PRODUCTS</div>
+      <h2>Recovered Paper Grades</h2>
+      <p>
+        We deal in a wide range of recovered paper grades to meet the diverse
+        requirements of India's paper industry.
+      </p>
+    </div>
+
+    <div class="product-grid">
+
+      <div class="card">
+        <div class="card-number">01</div>
+        <h3>OCC 11</h3>
+        <p>
+          Old Corrugated Containers — quality recovered cardboard suitable
+          for paper manufacturing and industrial applications.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-number">02</div>
+        <div class="tag">MOST DEMANDED</div>
+        <h3>OCC 12</h3>
+        <p>
+          Sorted recovered corrugated material with defined bale composition
+          for reliable performance and better yield.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-number">03</div>
+        <h3>OCC 95/5</h3>
+        <p>
+          Recovered corrugated material with approximately 95% OCC and
+          controlled allowable contamination.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-number">04</div>
+        <h3>Mixed Paper</h3>
+        <p>
+          Recovered mixed paper sourced from reliable international suppliers
+          for suitable paper-making applications.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-number">05</div>
+        <h3>Kraft Paper</h3>
+        <p>
+          Strong and durable recovered kraft paper materials for industrial
+          applications and paper production.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-number">06</div>
+        <h3>Other Grades</h3>
+        <p>
+          Additional recovered paper grades can be sourced according to
+          buyer requirements and mill specifications.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container about-grid">
+
+    <div class="about-image"></div>
+
+    <div>
+      <div class="kicker">ABOUT SIDHU TRADERS</div>
+      <h2>Built Around Reliable International Supply.</h2>
+      <p>
+        We connect international suppliers of recovered paper with industrial
+        buyers in India through dependable sourcing, communication and trade
+        coordination.
+      </p>
+      <p>
+        Our focus is simple: quality material, transparent transactions,
+        efficient logistics and long-term business relationships.
+      </p>
+
+      <div class="checks">
+        <div class="check">International supplier sourcing</div>
+        <div class="check">Quality-focused material selection</div>
+        <div class="check">Trade documentation coordination</div>
+        <div class="check">Reliable logistics support</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="work" id="work">
+  <div class="container">
+
+    <div class="section-head">
+      <div class="kicker">HOW WE WORK</div>
+      <h2>End-To-End Import Solutions</h2>
+      <p>
+        From international sourcing to delivery, we coordinate the complete
+        supply process.
+      </p>
+    </div>
+
+    <div class="work-grid">
+
+      <div class="work-card">
+        <div class="num">01</div>
+        <h3>Global Sourcing</h3>
+        <p>We source quality recovered paper from trusted suppliers worldwide.</p>
+      </div>
+
+      <div class="work-card">
+        <div class="num">02</div>
+        <h3>Supplier Verification</h3>
+        <p>We focus on reliable suppliers and clear commercial communication.</p>
+      </div>
+
+      <div class="work-card">
+        <div class="num">03</div>
+        <h3>Quality Inspection</h3>
+        <p>Material requirements and specifications are reviewed before shipment.</p>
+      </div>
+
+      <div class="work-card">
+        <div class="num">04</div>
+        <h3>Documentation</h3>
+        <p>Trade documentation and import coordination are handled systematically.</p>
+      </div>
+
+      <div class="work-card">
+        <div class="num">05</div>
+        <h3>Shipping & Logistics</h3>
+        <p>We coordinate shipping and logistics for efficient movement of cargo.</p>
+      </div>
+
+      <div class="work-card">
+        <div class="num">06</div>
+        <h3>Delivery to Mills</h3>
+        <p>Our goal is safe and timely delivery to the required destination in India.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="network" id="network">
+  <div class="container network-grid">
+
+    <div class="network-map"></div>
+
+    <div>
+      <div class="kicker">OUR GLOBAL NETWORK</div>
+      <h2>A Strong Global Footprint</h2>
+      <p>
+        We are developing international sourcing relationships across major
+        recovered-paper markets while connecting supply with Indian industry.
+      </p>
+
+      <div class="network-list">
+        <div class="network-item">
+          <strong>🌎 Sourcing Countries</strong>
+          <span>USA • UAE • UK • Canada • and more</span>
+        </div>
+
+        <div class="network-item">
+          <strong>⚓ Major Indian Ports</strong>
+          <span>Nava Sheva • Mundra • Pipavav • Kolkata • Chennai & more</span>
+        </div>
+
+        <div class="network-item">
+          <strong>🇮🇳 Serving Indian Industry</strong>
+          <span>Supply coordination for paper mills and industrial buyers.</span>
+        </div>
+      </div>
+
+      <a href="#contact" class="btn btn-primary">EXPLORE OUR NETWORK</a>
+    </div>
+
+  </div>
+</section>
+
+<section class="cta" id="suppliers">
+  <div class="container">
+    <div class="kicker">FOR INTERNATIONAL SUPPLIERS</div>
+    <h2>Become a Supplier Partner.</h2>
+    <p>
+      Are you an exporter or supplier of recovered paper?
+      Connect with SIDHU TRADERS and explore long-term business opportunities
+      with the Indian market.
+    </p>
+
+    <a href="#contact" class="btn btn-primary">BECOME A SUPPLIER</a>
+  </div>
+</section>
+
+<section class="contact" id="buyers">
+  <div class="container contact-grid">
+
+    <div class="contact-info">
+      <div class="kicker">FOR BUYERS & MILLS</div>
+      <h2>Let's Discuss Your Requirement.</h2>
+      <p>
+        Tell us your required grade, quantity and destination. Our team can
+        coordinate sourcing and import requirements.
+      </p>
+
+      <div class="contact-item">
+        <strong>Recovered Paper</strong>
+        <span>OCC 11 • OCC 12 • OCC 95/5 • Mixed Paper • Other Grades</span>
+      </div>
+
+      <div class="contact-item">
+        <strong>Business Location</strong>
+        <span>Jagraon, Ludhiana District, Punjab, India</span>
+      </div>
+
+      <div class="contact-item">
+        <strong>Email</strong>
+        <span>info@sidhutraders.com</span>
+      </div>
+    </div>
+
+    <form id="quoteForm">
+      <h3 style="margin-bottom:20px;color:#1b3b28">Request a Quote</h3>
+
+      <div class="form-row">
+        <input type="text" placeholder="Your Name" required>
+        <input type="text" placeholder="Company Name" required>
+      </div>
+
+      <div class="form-row">
+        <input type="email" placeholder="Email Address" required>
+        <input type="tel" placeholder="Phone / WhatsApp">
+      </div>
+
+      <select required>
+        <option value="">Select Product</option>
+        <option>OCC 11</option>
+        <option>OCC 12</option>
+        <option>OCC 95/5</option>
+        <option>Mixed Paper</option>
+        <option>Kraft Paper</option>
+        <option>Other Waste Paper Grade</option>
+      </select>
+
+      <input type="text" placeholder="Required Quantity / MT">
+
+      <textarea placeholder="Tell us about your requirement..."></textarea>
+
+      <button class="btn btn-primary" type="submit">SEND REQUEST</button>
+    </form>
+
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+        <div class="footer-brand">
+          SIDHU TRADERS
+          <small>GLOBAL SOURCING • INTERNATIONAL TRADE</small>
+        </div>
+        <p style="font-size:12px;margin-top:15px;max-width:300px">
+          Connecting global recovered-paper supply with Indian industry through
+          reliable sourcing and international trade.
+        </p>
+      </div>
+
+      <div>
+        <h4>COMPANY</h4>
+        <a href="#about">About Us</a>
+        <a href="#products">Products</a>
+        <a href="#network">Global Network</a>
+        <a href="#work">Trade & Logistics</a>
+      </div>
+
+      <div>
+        <h4>BUSINESS</h4>
+        <a href="#suppliers">Suppliers</a>
+        <a href="#buyers">Buyers</a>
+        <a href="#contact">Request a Quote</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div>
+        <h4>CONTACT</h4>
+        <a href="mailto:info@sidhutraders.com">info@sidhutraders.com</a>
+        <a href="tel:+919872700007">+91 98727 00007</a>
+        <a href="https://wa.me/919872700007">WhatsApp</a>
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      <span>© 2026 SIDHU TRADERS. All Rights Reserved.</span>
+      <span>International Sourcing • Import • Supply</span>
+    </div>
+
+  </div>
+</footer>
+
+<div class="float-buttons">
+  <a href="#contact">GET QUOTE</a>
+  <a href="https://wa.me/919872700007">WHATSAPP</a>
+  <a href="tel:+919872700007">CALL NOW</a>
+</div>
+
+<script>
+function toggleMenu(){
+  document.getElementById("nav").classList.toggle("show");
+}
+
+document.querySelectorAll("nav a").forEach(function(link){
+  link.addEventListener("click",function(){
+    document.getElementById("nav").classList.remove("show");
+  });
+});
+
+document.getElementById("quoteForm").addEventListener("submit",function(e){
+  e.preventDefault();
+  alert("Thank you. Your quotation request has been received. We will contact you shortly.");
+});
+</script>
+
+</body>
+</html>
